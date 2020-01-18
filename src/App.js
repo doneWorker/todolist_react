@@ -35,6 +35,7 @@ function App() {
   const updateTaskTitle = (id, title) => {
     const newTasks = [...tasks];
     newTasks.forEach(task => task.id === id && (task.title = title));
+    newTasks.sort(descOrder);
     setTasks(newTasks);
   }
 
