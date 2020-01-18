@@ -1,38 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+body {
+  background: #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
+  width: 700px;
+  margin: auto;
+}
+
+h3 {
   text-align: center;
+  margin: 0 0 5px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-add {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .3);
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-add input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-add input:focus {
+  border-color: green;
+  color: green;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list {
+  width: 700px;
+  min-height: 100px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-item {
+  padding: 5px;
+  background: #fff;
+  margin: 5px 0;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .1);
+}
+
+.todo-item input {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
+
+.todo-item.completed {
+  background: #70c870;
+}
+
+.todo-item span.todo-complete:hover i {
+  cursor: pointer;
+  color: green;
+}
+
+.todo-item span.todo-remove:hover i {
+  cursor: pointer;
+  color: red;
 }
